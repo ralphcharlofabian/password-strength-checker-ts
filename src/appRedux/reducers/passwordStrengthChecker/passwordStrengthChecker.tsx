@@ -7,7 +7,7 @@ const initialState = {
   passwordStrengthData: {}
 }
 
-export default (state: typeof initialState = initialState, action: any) => {
+export default (state= initialState, action) => {
   const { type, payload } = action || {};
 
   switch (type) {

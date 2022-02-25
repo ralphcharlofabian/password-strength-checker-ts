@@ -10,7 +10,6 @@ import { passwordStrengthCheckerActions as checkPasswordStrength } from '../../a
 import { Input, Row, Col, Card } from 'antd';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 
-import "./index.css" 
 
 import ColorBlocks from '../colorBlocks/index.tsx';
 
@@ -31,10 +30,18 @@ const pwStrCheckerSyle = {
   }
 }
 
+const textHeaderStyle = {
+  textAlign: 'center',
+  fontSize: 'xx-large',
+  fontWeight: 700,
+  paddingBottom: 20,
+}
+
+
 type Password = string;
 
 
-function PasswordStrengthChecker() {
+const PasswordStrengthChecker = () => {
   const dispatch = useDispatch();
   //const useAppDispatch = () => useDispatch<AppDispatch>()
   const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
@@ -66,7 +73,7 @@ function PasswordStrengthChecker() {
            <Col span={12} offset={6}>
               <Row>
                <Col span={14} offset={5}>
-                 <div className="textHeader">Is your password strong enough?</div>
+                 <div style={textHeaderStyle}>Is your password strong enough?</div>
                </Col>
               </Row>
               <Input.Password

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Row, Col, Card } from 'antd';
 
 const colorBlockStyle = {
@@ -17,7 +18,7 @@ const colorBlockStyle = {
     textAlign: 'center',
     paddingTop:50, 
     fontSize:22,
-  } as React.CSSProperties,
+  }
 }
 
 
@@ -46,7 +47,7 @@ function ColorBlocks({passwordScore, passwordLength}) {
         </Row>
         </Col>
       </Row>
-      <h2 style={colorBlockStyle.scoreComment}>
+      <h2 style={{textAlign: 'center', paddingTop:50, fontSize:22}}>
           {(passwordScore === 0 && passwordLength > 0) ? ` Your password is too weak!`  : null}
           {(passwordScore === 1 && passwordLength > 0) ? ` Hmmm... Try a bit harder...`  : null}
           {(passwordScore === 2 && passwordLength > 0) ? `Keep it up!` : null}
